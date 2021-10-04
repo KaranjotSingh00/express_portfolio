@@ -1,0 +1,175 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+/*Define colors*/
+:root{
+	--primary: #3DCFD3;
+	--dark: #161616;
+	--white: #fff;
+	--light: #F2F2F2;
+	--ternary: #898989;
+}
+/*set all body font family*/
+body{
+	font-family: 'Poppins', sans-serif;
+}
+p{
+	font-family: 'Lato', sans-serif;
+	line-height: 1.8;
+	color: var(--ternary);
+	margin:0;
+}
+/*all button design code*/
+.btn:focus{
+	outline: none;
+	box-shadow: none;
+}
+.btn-purp {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    text-transform: uppercase;
+    font-weight: 300;	
+    font-size: 18px;
+}
+.btn-purp:hover{
+	color: var(--white);
+	background: var(--primary);
+}
+/*main section css*/
+#hero{
+	background: var(--dark);
+	padding: 3rem 0;
+	clip-path: polygon(0 0,100% 0,100% 100%, 70% 87%, 0 100%);
+}
+.mainimg{
+	width: 100%;
+	height: 550px;
+}
+.mainimg > img{
+	height: 100%;
+	width: 100%;
+	object-fit: scale-down;
+}
+.maincontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero h6{
+	font-size: 1.6rem;
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+}
+.hero h1{
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin-bottom:2rem;
+	color: var(--white)
+}
+.hero h1 span{
+	color: var(--primary);
+}
+/*about section css*/
+#aboutme{
+	margin: 4rem 0;
+}
+.aboutimg{
+	height: 500px;
+	width: 100%;
+}
+.aboutimg > img{
+	height: 100%;
+	width: 100%;
+	object-fit: scale-down;
+}
+.about h1{
+	margin-bottom: 1rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.about h1 span{
+	color: var(--primary);
+}
+.about h3{
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: italic;
+}
+/*service css*/
+#service{
+	margin: 4rem 0;
+}
+.ser{
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom:2rem;
+}
+.ser span{
+	color: var(--primary);
+}
+.sermain{
+	margin-top:4rem;
+	margin-bottom: 4rem;
+}
+.icon-box {
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--primary);
+    padding: 14px 23px;
+    border:1px solid var(--primary);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.icon-box i {
+    color: #fff;
+    font-size: 38px;
+}
+.serbox:hover .icon-box{
+	background: transparent;
+}
+.serbox:hover i{
+	color: var(--primary);
+}
+.sercontent h2{
+	text-transform: uppercase;
+}
+.sercontent h2 span{
+	color: var(--primary);
+}
+.sercontent p{
+	font-size: 18px;
+}
+/*project css*/
+#projects{
+	margin: 4rem 0;
+	background: var(--dark);
+	padding: 4rem 0;
+}
+#projects h2{
+	color: var(--white);
+	font-weight: 600;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+/*footer css*/
+footer{
+	background: var(--dark);
+	padding: 4rem 0;
+}
+footer h3{
+	color: var(--white);
+	text-transform: uppercase;
+}
+footer h3 span{
+	color: var(--primary);
+}
+.copyright{
+	margin-top: 30px;
+}
+.copyright p{
+	color: var(--white);
+}
