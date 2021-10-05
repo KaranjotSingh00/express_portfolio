@@ -20,4 +20,8 @@ module.exports = function(app) {
     app.get('/project',(req,res)=>{ 
         res.render('projects.ejs');  
     });
+// post request for submit contact form and redirect to home 
+    app.post('/contact',(req,res)=>{ 
+        res.redirect('/');
+    });
  }
