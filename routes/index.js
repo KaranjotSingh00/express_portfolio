@@ -17,7 +17,7 @@ module.exports = function(app) {
         
         res.render('services.ejs');  
     });
-    app.get('/projects',(req,res)=>{ 
+    app.get('/project',(req,res)=>{ 
         
         res.render('projects.ejs');  
     });

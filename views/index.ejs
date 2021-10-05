@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>My Awesome Portfolio</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--link bootstrap with the help of cdn-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!--fontawesme ison library-->
@@ -12,21 +12,23 @@
 </head>
 <body>
 
+	<%- include('partials/header') %>
+
 	<section id="hero">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-md-6 col-lg-6 d-none d-md-block d-lg-block d-xl-block">
 					<div class="mainimg">
 						<img src="img/man.png">
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-md-6 col-lg-6">
 					<div class="maincontent">
 						<div class="maincontentinner hero">
 							<h6>Karanjot Singh</h6>
 						<h1>I'm a creative <span>Designer</span></h1>
 						<div class="btn-box">
-							<a href="#" class="btn btn-lg btn-purp">downloard Cv</a>
+							<a href="#" class="btn btn-lg btn-purp">download Cv</a>
 						</div>
 						</div>
 					</div>
@@ -35,102 +37,13 @@
 		</div>
 	</section>
 
-	<section id="aboutme">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="aboutimg">
-						<img src="img/man2.png">
-					</div>
-				</div>	
-				<div class="col-lg-6">
-				<div class="maincontent">
-					<div class="maincontentinner about">
-						<h1>About <span>Me</span></h1>
-						<h3>Hello! i'm karanjot singh</h3>
-						<p></p>
-						<div class="btn-box">
-							<a href="/about" class="btn btn-lg btn-purp">About me</a>
-						</div>
-					</div>
-				</div>
-			</div>	
-			</div>
-		</div>
-	</section>
+	<%- include('partials/aboutContent') %>
 
-	<section id="service">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1 class="text-center ser">Our <span>Services</span></h1>
-				</div>
-			</div>
-		</div>
+	<%- include('partials/servicesContent') %>
 
-		<div class="container sermain">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="serbox">
-						<div class="icon-box">
-							<i class="fas fa-palette"></i>
-						</div>
-						<div class="sercontent text-center">
-							<h2>Web <span>Designing</span></h2>
-							<p>one of the most important thing on a website that attract the customer's attention is the design of the website.The experienced team has formulated plenty of womderful website using different software and now my team is ready to add some sparkle to your website as well.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="serbox">
-						<div class="icon-box">
-							<i class="fas fa-palette"></i>
-						</div>
-						<div class="sercontent text-center">
-							<h2>Web <span>Designing</span></h2>
-							<p>one of the most important thing on a website that attract the customer's attention is the design of the website.The experienced team has formulated plenty of womderful website using different software and now my team is ready to add some sparkle to your website as well.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="serbox">
-						<div class="icon-box">
-							<i class="fas fa-palette"></i>
-						</div>
-						<div class="sercontent text-center">
-							<h2>Web <span>Designing</span></h2>
-							<p>one of the most important thing on a website that attract the customer's attention is the design of the website.The experienced team has formulated plenty of womderful website using different software and now my team is ready to add some sparkle to your website as well.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="btn-box text-center">
-							<a href="/services" class="btn btn-lg btn-purp">View All Services</a>
-						</div>
-				</div>	
-			</div>
-		</div>
-	</section>
+	<%- include('partials/projectBanner') %>
 
-	<section id="projects">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h2 class="text-center">Click here to check my awesome project :)</h2>
-					<div class="btn-box text-center">
-							<a href="/projects" class="btn btn-lg btn-purp">View All Projects</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-    <%- include('partials/footer') %>
+	<%- include('partials/footer') %>
 
 <!--link Jquery-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

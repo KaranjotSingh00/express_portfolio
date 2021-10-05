@@ -1,2 +1,48 @@
-<p>Contact</p>
-<%- include('partials/footer') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link bootstrap with the help of cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!--fontawesme ison library-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+	<!-- Linked my custom stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<%- include('partials/header') %>
+	<section id="contact">
+		<div class="container">
+			<h3>Con<span>tact Me</span></h3>
+			<p><b>Contact</b> : 6477716476</p>
+			<p><b>E-mail</b> : Karanjotsingh0018@gmail.com</p>
+			<div class="conatactcontainer">
+				<form method="get">
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+					<label for="lname">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="lastname" placeholder="Your last name..">
+					<label for="tel">Last Name</label>
+					<input type="tel" id="tel" name="lastname" placeholder="Your last name..">
+					<label for="subject">Message</label>
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<%- include('partials/projectBanner') %>
+
+	<%- include('partials/footer') %>
+
+<!--link Jquery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!--link Bootstrap Js-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

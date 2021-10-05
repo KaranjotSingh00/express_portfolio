@@ -1,2 +1,26 @@
-<p>Services</p>
-<%- include('partials/footer') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link bootstrap with the help of cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!--fontawesme ison library-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+	<!-- Linked my custom stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<%- include('partials/header') %>
+
+	<%- include('partials/servicesContent') %>
+
+	<%- include('partials/projectBanner') %>
+
+	<%- include('partials/footer') %>
+<!--link Jquery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!--link Bootstrap Js-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,2 +1,44 @@
-<p>Projects</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link bootstrap with the help of cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!--fontawesme ison library-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+	<!-- Linked my custom stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+<div class="projectmain">
+	<h1 class="text-center pro">My Awe<span>some Projects</span></h1><hr>
+<div id="gallery" class="container">  
+  <img src="img/pro.png" class="img-responsive">
+  <img src="img/pro1.png" class="img-responsive">
+  <img src="img/pro2.png" class="img-responsive">
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
 <%- include('partials/footer') %>
+<!--link Jquery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!--link Bootstrap Js-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--custom js-->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

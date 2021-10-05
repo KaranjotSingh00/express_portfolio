@@ -98,6 +98,10 @@ p{
 	font-weight: 400;
 	font-style: italic;
 }
+.about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 /*service css*/
 #service{
 	margin: 4rem 0;
@@ -158,11 +162,14 @@ p{
 /*footer css*/
 footer{
 	background: var(--dark);
-	padding: 4rem 0;
+	padding: 4rem 0 2rem 0;
 }
 footer h3{
 	color: var(--white);
 	text-transform: uppercase;
+}
+footer p{
+	color: var(--white);
 }
 footer h3 span{
 	color: var(--primary);
@@ -172,4 +179,191 @@ footer h3 span{
 }
 .copyright p{
 	color: var(--white);
+}
+.copyright p span{
+	color: var(--primary);
+}
+.footerul ul{
+	list-style: none;
+	padding: 0;
+}
+.footerul ul li{
+	color: var(--white);
+	font-size: 18px;
+	margin:10px 0;
+	position: relative;
+}
+.footerul ul li:after{
+	position: absolute;
+	content: '';
+	height: 3px; 
+	width: 20px;
+	background: var(--primary);
+	bottom: 0;
+	left:0;
+	transition: all .3s;
+}
+.footerul ul li:hover{
+	cursor: pointer;
+}
+.footerul ul li:hover:after{
+	width: 50px;
+}
+
+/*nav bar css*/
+.bg-dark1{
+	background: var(--dark);
+}
+a.navbar-brand{
+	width: 20%;
+	margin-right: 40px;
+}
+a.navbar-brand img{
+	width: 100%;
+}
+.btn-outline-success{
+	border-color: var(--primary);
+	color: var(--primary);
+}
+.btn-outline-success:hover{
+	background: var(--primary);
+}
+a.nav-link {
+    color: var(--white) !important;
+    font-size: 16px;
+    margin: 0 4px;
+}
+a.nav-link:hover{
+	color: var(--primary) !important;
+}
+.navbar-toggler-icon{
+	background-image: none !important; 
+}
+.navbar-toggler-icon i{
+	color: var(--white);
+	font-size: 26px;
+}
+@media (max-width: 991px){
+	.hero h1 {
+	    font-size: 3rem;
+	}
+	.mainimg {
+	    height: 450px;
+	}
+	footer h3 {
+	    font-size: 22px;
+	}
+}
+@media (max-width: 767px){
+	section#aboutme .row {
+	    flex-direction: column-reverse;
+	}
+	.maincontent {
+	    margin-bottom: 30px;
+	}
+	.serbox {
+	    margin: 20px 0;
+	}
+	.footerul {
+	    margin: 20px 0;
+	}
+}
+@media (max-width: 567px){
+	a.navbar-brand {
+	    width: 65%;
+	}
+	#projects h2 {
+	    font-size: 26px;
+	}
+	.copyright p {
+	    font-size: 14px;
+	}
+}
+
+
+/*project page css*/
+.projectmain{
+	margin: 4rem 0;
+}
+.pro span{
+	color: var(--primary);
+}
+#gallery{
+  column-count:2;
+  column-gap:20px;
+}
+@media (max-width:1200px){
+  #gallery{
+  column-count:2;
+  column-gap:20px;
+}
+}
+@media (max-width:800px){
+  #gallery{
+  column-count:2;
+  column-gap:20px;
+}
+}
+@media (max-width:600px){
+  #gallery{
+  column-count:1;
+}  
+}
+#gallery img{
+  width:100%;
+  height:auto;
+  margin: 4% auto;
+  box-shadow:-3px 5px 15px #000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.modal-img,.model-vid{
+  width:100%;
+  height:auto;
+}
+.modal-body{
+  padding:0px;
+}
+
+/*contact page css*/
+input[type=text],input[type=email],input[type=tel], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--dark);
+}
+
+.conatactcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+}
+#contact{
+	margin:4rem 0;
+}
+#contact h3{
+	margin-bottom: 30px;
+	font-size: 35px;
+}
+#contact h3 span{
+	color: var(--primary)
 }
