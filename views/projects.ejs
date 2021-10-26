@@ -11,7 +11,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<%if(session=="1"){%>
+  <%- include('partials/loginheader') %>
+<%}else{%>
   <%- include('partials/header') %>
+<%}%>
 <div class="projectmain">
 	<h1 class="text-center pro">My Awe<span>some Projects</span></h1><hr>
 <div id="gallery" class="container">  

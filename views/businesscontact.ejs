@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link bootstrap with the help of cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!--fontawesme ison library-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+	<!-- Linked my custom stylesheet-->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<%- include('partials/loginheader') %>
+    <div class="container">
+        <div class="row">
+			<div class="col-lg-12">
+				<table id="view-contact-table" class="create-table table table-borderless">
+					<thead> 
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+							<th>Message</th>
+							<th>Contact Number</th>
+						</tr>
+   					</thead>
+	 				<tbody>
+	 				</tbody>
+		   			<tfoot>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Contact Number</th>
+						<th>Action</th>
+		   			</tfoot>
+				   
+				</table>
+			</div>
+		</div>
+    </div>
+	<%- include('partials/footer') %>
+
+	<!-- update popup -->
+	<div id="updatemodal" class="modal">
+  
+		<div class="modalmainpouter">
+			<div class="container">
+				<div class="col-lg-8 mx-auto modalmain">
+					<form method="post" action="/updatecontact" >
+						<span onclick="document.getElementById('updatemodal').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<input type="text" id="id" name="id" hidden>
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="firstName" placeholder="Your name..">
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastName" placeholder="Your last name..">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="Your email..">
+						<label for="email">Contact Number</label>
+						<input type="tel" id="number" name="number" placeholder="Your Contact Number..">
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+<!--link Jquery-->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+<!--link Bootstrap Js-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
