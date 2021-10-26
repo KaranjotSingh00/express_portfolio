@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 var url = '/getcontact'
     var Table = $('#view-contact-table').DataTable({
+    responsive: true,
       rowReorder: {
           dataSrc: 'order',
           selector: 'tr'
@@ -37,6 +38,7 @@ var url = '/getcontact'
           }
       }
   });
+
     $.ajax({
         type: "get",
         url: url,

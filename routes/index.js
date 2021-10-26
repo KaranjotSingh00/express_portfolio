@@ -58,6 +58,7 @@ module.exports = function(app) {
         var result = await promises.addContact(data);
         res.redirect('/');
     });
+// post request for update contact form and redirect to business contact page
     app.post('/updatecontact',async(req,res)=>{ 
         var data = [
             firstName = req.body.firstName,
@@ -69,7 +70,7 @@ module.exports = function(app) {
         var result = await promises.updateContact(data);
         res.redirect('/businesscontact');
     });
-    // get request to open project page 
+// get request to open project page 
     app.get('/login',(req,res)=>{ 
         if (req.session.userId) {
             res.redirect('/');
@@ -78,7 +79,7 @@ module.exports = function(app) {
             res.render('login');
         }
     });
-    
+// get request to open businesscontact page    
     app.get('/businesscontact',(req,res)=>{ 
         if (req.session.userId) {
             res.render('businesscontact');
@@ -87,7 +88,7 @@ module.exports = function(app) {
             res.redirect('/login');
         }
     });
-    
+// post request to login   
     app.post('/login' ,async(req,res)=>{ 
         var email = req.body.email
         var password = req.body.password
@@ -106,13 +107,14 @@ module.exports = function(app) {
             res.render('login');
         }     
     });
+//get request from ajax to get contacts from db  
     app.get('/getcontact',async(req,res)=>{
         if (req.session.userId) {
             var result = await promises.getcontact();
             res.send(result);
         }
     });
-    
+//get request from ajax to get and delete contact from db
     app.get('/deletegetcontact',async(req,res)=>{
         if (req.session.userId) {
             var id = req.query.id;
@@ -121,6 +123,7 @@ module.exports = function(app) {
             res.send(result);
         }
     });
+//get request from ajax for editing form of contact 
     app.get('/getsinglecontact',async(req,res)=>{
         if (req.session.userId) {
             var id = req.query.id;
@@ -128,6 +131,7 @@ module.exports = function(app) {
             res.send(result);
         }
     });
+//get request for logout
     app.get('/logout', async (req, res) => {
         // await promises.updateSession(req.session.Id);
          req.session.destroy(function (err) {

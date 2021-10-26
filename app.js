@@ -25,8 +25,7 @@ app.use(bodyparser.urlencoded({
     extended: true
  }));
  app.use(bodyparser.json());
-//future use for login security
-
+//use for login security not go to back page without refresh
 app.use(function(req, res, next) {
     res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
     next();
@@ -34,8 +33,6 @@ app.use(function(req, res, next) {
 
 // set routing file
 require('./routes/index.js')(app);
-
-
 
 app.listen(port);
 console.log('project running on localhost: ' + port);
